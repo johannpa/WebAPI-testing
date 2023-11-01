@@ -17,6 +17,7 @@ namespace WebAPI.Tests
             //Arrange - create a new instance of the class we want to test - this where you would prepare everything for the test, prepare for testing
 
             //Act - this is where the method we are testing is executed
+            var okResult = _weatherForecastController.Get();
 
             //Assert - this is the final part of the test, where we check that the method we are testing returns the expected value
         }
