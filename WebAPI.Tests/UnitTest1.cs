@@ -9,7 +9,7 @@ namespace WebAPI.Tests
 
             //Act - this is where the method we are testing is executed
 
-            //Assert
+            //Assert - this is the final part of the test, where we check that the method we are testing returns the expected value
         }
     }
 }
