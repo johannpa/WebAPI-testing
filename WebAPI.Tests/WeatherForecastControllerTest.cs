@@ -1,3 +1,4 @@
+using Microsoft.AspNetCore.Mvc;
 using WebAPI.Controllers;
 
 namespace WebAPI.Tests
@@ -20,6 +21,18 @@ namespace WebAPI.Tests
             var okResult = _weatherForecastController.Get();
 
             //Assert - this is the final part of the test, where we check that the method we are testing returns the expected value
+            Assert.IsType<OkObjectResult>(okResult.Result);
+        }
+
+        [Fact]
+        public void Get_WhenCalled_ReturnsFiveItems()
+        {
+            // Act
+            var okResult = _weatherForecastController.Get().Result as OkObjectResult;
+
+            // Assert
+            var items = Assert.IsType<WeatherForecast[]>(okResult.Value);
+            Assert.Equal(5, items.Length);
         }
     }
 }
