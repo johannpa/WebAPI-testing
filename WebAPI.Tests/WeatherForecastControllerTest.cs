@@ -1,7 +1,16 @@
+using WebAPI.Controllers;
+
 namespace WebAPI.Tests
 {
-    public class UnitTest1
+    public class WeatherForecastControllerTest
     {
+        private readonly WeatherForecastController _weatherForecastController;
+
+        public WeatherForecastControllerTest()
+        {
+            _weatherForecastController = new WeatherForecastController();
+        }
+
         [Fact]
         public void Test1()
         {
