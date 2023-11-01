@@ -12,7 +12,7 @@ namespace WebAPI.Tests
         }
 
         [Fact]
-        public void Test1()
+        public void Get_WhenCalled_ReturnOkResult()
         {
             //Arrange - create a new instance of the class we want to test - this where you would prepare everything for the test, prepare for testing
 
